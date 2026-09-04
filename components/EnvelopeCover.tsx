@@ -260,7 +260,7 @@ export default function EnvelopeCover({
             </span>
 
             {/* Couple Names */}
-            <h1 className="mt-2 font-azkia text-[32px] sm:text-[38px] leading-tight text-neutral-900 drop-shadow-sm">
+            <h1 className="mt-2 font-azkia text-[38px] min-[390px]:text-[44px] sm:text-[48px] leading-tight text-neutral-900 drop-shadow-sm">
               {firstName} & {secondName}
             </h1>
 

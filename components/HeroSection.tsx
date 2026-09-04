@@ -40,16 +40,16 @@ export default function HeroSection({ card, guestName }: HeroSectionProps) {
       <PetalEffect />
 
       {/* Content */}
-      <div className="relative z-20 flex h-full flex-col justify-between p-6 text-center">
+      <div className="relative z-20 flex h-full flex-col justify-between px-2 py-6 sm:p-6 text-center">
         {/* Couple Names on the same line */}
-        <div className="mt-8 animate-fade-in-up flex items-center justify-center gap-2.5 flex-nowrap">
-          <h1 className="font-azkia text-[36px] sm:text-[44px] font-normal tracking-wide text-neutral-900 drop-shadow-[0_2px_4px_rgba(255,255,255,0.85)] whitespace-nowrap">
+        <div className="mt-8 animate-fade-in-up flex items-center justify-center gap-1.5 sm:gap-3 flex-nowrap">
+          <h1 className="font-azkia text-[44px] min-[390px]:text-[48px] sm:text-[56px] font-normal tracking-wide text-neutral-900 drop-shadow-[0_2px_4px_rgba(255,255,255,0.9)] whitespace-nowrap">
             {firstName}
           </h1>
-          <span className="font-ephesis text-3xl sm:text-4xl text-neutral-900 drop-shadow-[0_2px_4px_rgba(255,255,255,0.85)] px-1">
+          <span className="font-ephesis text-4xl min-[390px]:text-5xl sm:text-6xl text-neutral-900 drop-shadow-[0_2px_4px_rgba(255,255,255,0.9)] px-1">
             &
           </span>
-          <h1 className="font-azkia text-[36px] sm:text-[44px] font-normal tracking-wide text-neutral-900 drop-shadow-[0_2px_4px_rgba(255,255,255,0.85)] whitespace-nowrap">
+          <h1 className="font-azkia text-[44px] min-[390px]:text-[48px] sm:text-[56px] font-normal tracking-wide text-neutral-900 drop-shadow-[0_2px_4px_rgba(255,255,255,0.9)] whitespace-nowrap">
             {secondName}
           </h1>
         </div>
