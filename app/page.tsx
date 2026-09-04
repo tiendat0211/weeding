@@ -20,7 +20,9 @@ export async function generateMetadata(): Promise<Metadata> {
   const weddingDate = new Date(card.wedding_date);
   const formattedDate = `${weddingDate.getDate()}/${weddingDate.getMonth() + 1}/${weddingDate.getFullYear()}`;
   const description = `Trân trọng kính mời quý khách đến tham dự lễ thành hôn của ${card.groom_name} & ${card.bride_name} vào ngày ${formattedDate}.`;
-  const heroImage = getPublicStorageUrl(card.hero_image_url);
+  const heroImage =
+    getPublicStorageUrl(card.hero_image_url) ||
+    'https://xwfttbdowexyxpmhvvfs.supabase.co/storage/v1/object/public/Weeding/lytaiweeding/WAGO2309.jpg';
 
   return {
     title,
@@ -30,22 +32,22 @@ export async function generateMetadata(): Promise<Metadata> {
       description,
       type: 'website',
       locale: 'vi_VN',
-      images: heroImage
-        ? [
-            {
-              url: heroImage,
-              width: 1200,
-              height: 630,
-              alt: `${card.groom_name} & ${card.bride_name}`,
-            },
-          ]
-        : [],
+      url: 'https://lytaiweeding.vercel.app',
+      siteName: 'Thiệp Cưới Online',
+      images: [
+        {
+          url: heroImage,
+          width: 1200,
+          height: 630,
+          alt: `Thiệp Cưới ${card.groom_name} & ${card.bride_name}`,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: heroImage ? [heroImage] : [],
+      images: [heroImage],
     },
   };
 }

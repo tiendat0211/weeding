@@ -48,7 +48,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ? `Trân trọng kính mời quý khách đến tham dự lễ vu quy của ${card.bride_name} & ${card.groom_name} vào ngày ${formattedDate}.`
     : `Trân trọng kính mời quý khách đến tham dự lễ thành hôn của ${card.groom_name} & ${card.bride_name} vào ngày ${formattedDate}.`;
   
-  const heroImage = getPublicStorageUrl(card.hero_image_url);
+  const heroImage =
+    getPublicStorageUrl(card.hero_image_url) ||
+    'https://xwfttbdowexyxpmhvvfs.supabase.co/storage/v1/object/public/Weeding/lytaiweeding/WAGO2309.jpg';
+
+  const coupleAlt = isNhaGai
+    ? `Thiệp Cưới ${card.bride_name} & ${card.groom_name}`
+    : `Thiệp Cưới ${card.groom_name} & ${card.bride_name}`;
 
   return {
     title,
@@ -58,22 +64,22 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description,
       type: 'website',
       locale: 'vi_VN',
-      images: heroImage
-        ? [
-            {
-              url: heroImage,
-              width: 1200,
-              height: 630,
-              alt: `${card.groom_name} & ${card.bride_name}`,
-            },
-          ]
-        : [],
+      url: `https://lytaiweeding.vercel.app/${params.slug}`,
+      siteName: 'Thiệp Cưới Online',
+      images: [
+        {
+          url: heroImage,
+          width: 1200,
+          height: 630,
+          alt: coupleAlt,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: heroImage ? [heroImage] : [],
+      images: [heroImage],
     },
   };
 }
