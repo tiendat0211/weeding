@@ -30,7 +30,7 @@ export default function EventLocationsSection({ card }: EventLocationsSectionPro
       tabLabel: 'Lễ Vu Quy',
       badge: 'LỄ VU QUY',
       name: card.ceremony_venue || 'Tư Gia Nhà Gái',
-      address: card.ceremony_address || 'Số 3, Ngách 43/57 Đường Đồng Hội, Thôn Trung Thôn, Đông Anh, Hà Nội',
+      address: card.ceremony_address || 'Số 3, Ngách 43/57 Đường Đông Hội, Thôn Trung Thôn, Đông Anh, Hà Nội',
       time: '09:30 - Chủ Nhật, 20.09.2026',
       mapUrl:
         'https://www.google.com/maps?q=21.0927470,105.8694060&entry=gps&shh=CAE&lucs=,94297699,100795621,94231188,94280568,47071704,94218641,94282134,94286869,100820247,100822499&g_ep=CAISEjI2LjMzLjEuOTYxODkxNDMyMBgAINeCAypdLDk0Mjk3Njk5LDEwMDc5NTYyMSw5NDIzMTE4OCw5NDI4MDU2OCw0NzA3MTcwNCw5NDIxODY0MSw5NDI4MjEzNCw5NDI4Njg2OSwxMDA4MjAyNDcsMTAwODIyNDk5QgJWTg%3D%3D&skid=a570c99c-7ed9-40ae-b981-cd4a445673c6&g_st=ic',
@@ -74,22 +74,20 @@ export default function EventLocationsSection({ card }: EventLocationsSectionPro
                 <button
                   type="button"
                   onClick={() => setActiveTab('reception')}
-                  className={`flex-1 py-2 px-2.5 rounded-lg font-montserrat text-[11px] font-bold tracking-wider uppercase transition-all duration-300 flex items-center justify-center space-x-1 ${
-                    activeTab === 'reception'
+                  className={`flex-1 py-2 px-2.5 rounded-lg font-montserrat text-[11px] font-bold tracking-wider uppercase transition-all duration-300 flex items-center justify-center space-x-1 ${activeTab === 'reception'
                       ? 'bg-wedding-brown text-white shadow-sm'
                       : 'text-neutral-500 hover:text-wedding-brown'
-                  }`}
+                    }`}
                 >
                   <span>{nhaGaiTabs.reception.tabLabel}</span>
                 </button>
                 <button
                   type="button"
                   onClick={() => setActiveTab('ceremony')}
-                  className={`flex-1 py-2 px-2.5 rounded-lg font-montserrat text-[11px] font-bold tracking-wider uppercase transition-all duration-300 flex items-center justify-center space-x-1 ${
-                    activeTab === 'ceremony'
+                  className={`flex-1 py-2 px-2.5 rounded-lg font-montserrat text-[11px] font-bold tracking-wider uppercase transition-all duration-300 flex items-center justify-center space-x-1 ${activeTab === 'ceremony'
                       ? 'bg-wedding-brown text-white shadow-sm'
                       : 'text-neutral-500 hover:text-wedding-brown'
-                  }`}
+                    }`}
                 >
                   <span>{nhaGaiTabs.ceremony.tabLabel}</span>
                 </button>
