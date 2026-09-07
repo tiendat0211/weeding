@@ -176,7 +176,7 @@ export default function InvitationCardSection({ card }: InvitationCardSectionPro
                   </span>
                 </div>
                 <p className="mt-1 text-[11px] text-neutral-600">
-                  Số 3, Ngách 43/57 Đường Đồng Hội
+                  Số 3, Ngách 43/57 Đường Đông Hội
                 </p>
                 <p className="text-[11px] text-neutral-600">
                   T. Trung Thôn, X. Đông Anh, TP. Hà Nội

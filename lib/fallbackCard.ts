@@ -59,8 +59,8 @@ export const fallbackWeddingCardNhaGai: WeddingCard = {
   ceremony_time: '09:30 - Chủ Nhật, 20.09.2026',
   ceremony_date_text: '20.09.2026 (Tức Ngày 10 Tháng 08 Năm Bính Ngọ)',
   ceremony_venue: 'Tư Gia Nhà Gái',
-  ceremony_address: 'Số 3, Ngách 43/57 Đường Đồng Hội, T. Trung Thôn, X. Đông Anh, TP. Hà Nội',
-  ceremony_map_url: 'https://maps.google.com/?q=Số+3+Ngách+43/57+Đường+Đồng+Hội,+Đông+Anh,+Hà+Nội',
+  ceremony_address: 'Số 3, Ngách 43/57 Đường Đông Hội, T. Trung Thôn, X. Đông Anh, TP. Hà Nội',
+  ceremony_map_url: 'https://www.google.com/maps?q=21.0927470,105.8694060&entry=gps&shh=CAE&lucs=,94297699,100795621,94231188,94280568,47071704,94218641,94282134,94286869,100820247,100822499&g_ep=CAISEjI2LjMzLjEuOTYxODkxNDMyMBgAINeCAypdLDk0Mjk3Njk5LDEwMDc5NTYyMSw5NDIzMTE4OCw5NDI4MDU2OCw0NzA3MTcwNCw5NDIxODY0MSw5NDI4MjEzNCw5NDI4Njg2OSwxMDA4MjAyNDcsMTAwODIyNDk5QgJWTg%3D%3D&skid=a570c99c-7ed9-40ae-b981-cd4a445673c6&g_st=ic',
 };
 
 export const fallbackWeddingCard: WeddingCard = fallbackWeddingCardNhaTrai;
